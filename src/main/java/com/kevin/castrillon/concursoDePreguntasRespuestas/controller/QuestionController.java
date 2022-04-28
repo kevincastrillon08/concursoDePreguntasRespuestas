@@ -10,14 +10,6 @@ public class QuestionController {
 
     @GetMapping("/name")
     String resultName() {
-        Question question1 = new Question();
-        Question question2 = new Question(1L, "pregunta 2", 1);
-
-        question1.getId();
-        question1.setText("pregunta 1");
-
-        String textSaved = question1.getText();
-
         return "Kevin";
     }
 }

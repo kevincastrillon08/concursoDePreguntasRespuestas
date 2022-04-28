@@ -1,19 +1,25 @@
 package com.kevin.castrillon.concursoDePreguntasRespuestas.model;
 
+import java.util.List;
+
 public class Question {
 
     //  Atributos
     private Long id;
     private String text;
-    private int category;
+    private List<Answer> answers;
+    private Category category;
 
     // Constructores
     public Question() {}
 
-    public Question(Long id, String text, int category) {
+    public Question(Long id, String text, List<Answer> answers) {
         this.id = id;
         this.text = text;
+        this.answers = answers;
         this.category = category;
+
+
     }
 
     //Metodos GET y SET
@@ -33,11 +39,19 @@ public class Question {
         this.text = text;
     }
 
-    public int getCategory() {
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }
